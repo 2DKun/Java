@@ -1,37 +1,35 @@
 package com.company;
 
+
 import java.util.LinkedList;
 
 public class Main {
-    private static class Entry<E>
-    {
-        E element;
-        Entry<E> next;
-        Entry<E> prev;
 
-        Entry(E element, Entry<E> next, Entry<E> prev)
-        {
-            this.element = element;
-            this.next = next;
-            this.prev = prev;
-        }
-    }
 
     public static void main(String[] args) {
-        LinkedList<Car> list= new LinkedList<>();
-        Car car1=new Car("BMW");
-        Car car2=new Car("Ford");
-        Car car3=new Car("Toyota");
-
-        list.add(car1);
-        list.add(car2);
-        list.add(car3);
-
-        System.out.println(list.getFirst());
-        System.out.println(list.getLast());
-        //List<String> list2= new LinkedList<String>();
-        Entry newEntry = new Entry("0", header, header.prev);
-
+        LinkedList<String> linkedList = new LinkedList<String>();
+        linkedList.add("A"); //добавление в список
+        linkedList.add("B");
+        linkedList.add("C");
+        linkedList.add("D");
+        linkedList.add("E");
+        linkedList.add("F");
+        linkedList.addFirst("G"); //в начало
+        linkedList.addLast("H"); //в конец
+        System.out.println(linkedList.element()); //извлечение первого элемента списка
+        System.out.println(linkedList.contains("A")); //проверка на содержание в списке
+        System.out.println(linkedList.element());
+        System.out.println(linkedList.get(4)); //получение элемента под индексом
+        System.out.println(linkedList.getFirst()); //получение первого элемента списка
+        System.out.println(linkedList.getLast()); //получение последнего элемента списка
+        System.out.println(linkedList.indexOf("C")); //получение индека указанного элемента
+        System.out.println(linkedList.contains("D"));
+        System.out.println(linkedList.offer("F")); //указанный элемент становиться последним
+        System.out.println(linkedList.getLast());
+        System.out.println(linkedList.isEmpty()); //проверяет пустой ли список
+        System.out.println(linkedList.iterator().next());
+        linkedList.push("N"); //похоже на addFirst, тоже добавляет в начало списка
+        System.out.println(linkedList.element());
     }
-
 }
+
